@@ -251,13 +251,12 @@ elif page == "📊 Batch Evaluation":
             st.warning("The CSV contains no rows.")
             st.stop()
 
-        actual_raw = df["Attrition"]
-        if actual_raw.dtype == object:
-            actual_raw = actual_raw.astype(str).str.strip().str.lower().map({"yes": 1, "no": 0, "1": 1, "0": 0})
-        actual = pd.to_numeric(actual_raw, errors="coerce")
-        if actual.isna().any() or not set(actual.astype(int).unique()).issubset({0, 1}):
+        actual_raw = df["Attrition"].astype(str).str.strip().str.lower()
+        actual = actual_raw.map({"yes": 1, "no": 0, "1": 1, "0": 0})
+        if actual.isna().any():
             st.error("`Attrition` must contain only Yes/No or 1/0 values.")
             st.stop()
+        
         actual = actual.astype(int)
         pred, prob = predict(df)
         metrics = [accuracy_score(actual, pred), precision_score(actual, pred, zero_division=0), recall_score(actual, pred, zero_division=0), f1_score(actual, pred, zero_division=0)]

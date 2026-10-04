@@ -1,0 +1,5 @@
+JobRole,EducationField,BusinessTravel,OverTime,MaritalStatus,Department,TotalWorkingYears,JobLevel,YearsSinceLastPromotion,NumCompaniesWorked,YearsWithCurrManager,EnvironmentSatisfaction,JobSatisfaction,Gender,DistanceFromHome,JobInvolvement,MonthlyIncome,Age,YearsAtCompany,RelationshipSatisfaction,PercentSalaryHike,YearsInCurrentRole,WorkLifeBalance,DailyRate,StockOptionLevel,Attrition
+Sales Executive,Life Sciences,Travel_Rarely,Yes,Single,Sales,8,2,7,4,4,2,3,Male,6,3,5200,29,4,2,14,2,3,950,0,Yes
+Research Scientist,Life Sciences,Travel_Rarely,No,Married,Research & Development,10,2,1,1,7,3,4,Female,2,3,6100,36,10,4,18,7,3,1100,1,No
+Laboratory Technician,Medical,Travel_Frequently,Yes,Single,Research & Development,3,1,0,3,2,2,2,Female,15,2,3200,25,3,1,13,2,2,700,0,Yes
+Manufacturing Director,Technical Degree,Non-Travel,No,Married,Research & Development,18,4,4,2,8,4,4,Male,5,4,9800,45,15,3,20,8,4,1200,1,No
